@@ -1,8 +1,8 @@
-.. _using-zopeskel:
+.. _zopeskel:
 
-==============
-Using ZopeSkel
-==============
+========
+ZopeSkel
+========
 
 Installing ZopeSkel
 ===================

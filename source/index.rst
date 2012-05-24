@@ -9,14 +9,14 @@ Templer System Manual
 
 .. sidebar:: Using ZopeSkel
 
-    Templer is derived from an earlier system--ZopeSkel_--which was designed
+    Templer is derived from an earlier system -- ZopeSkel_ -- which was designed
     specifically for the needs of the Zope_ and Plone_ communities.
 
     If you have worked with ZopeSkel_ in the past, you may continue to do so
     in the same way you always have. You will find that the selection of
     templates is a bit different, but the system works exactly as before.
 
-    For more information on using ZopeSkel, see :ref:`using-zopeskel` in this 
+    For more information on using ZopeSkel, see :ref:`zopeskel` in this 
     manual.
 
 This manual covers the templer code generation system. Templer is a
@@ -59,7 +59,7 @@ Contents
    users/index
    developers/index
    information/index
-   zopeskel
+   applications/index
 
 Indices and tables
 ==================
