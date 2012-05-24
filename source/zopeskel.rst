@@ -1,3 +1,5 @@
+.. _using-zopeskel:
+
 ==============
 Using ZopeSkel
 ==============
