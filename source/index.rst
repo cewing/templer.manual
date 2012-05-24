@@ -56,7 +56,6 @@ Contents
    
    quickstart
    packages
-   users/index
    developers/index
    information/index
    applications/index

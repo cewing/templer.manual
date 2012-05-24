@@ -78,14 +78,14 @@ templer.plone
 
     The package may be installed with the ``[localcommands]`` extra, in which
     case it will depend on templer.plone.localcommands_ and will have 
-    local commands available for generated skeletons.
+    :term:`local commands <local command>` available for generated skeletons.
 
 .. _templer.plone.localcommands:
 
 templer.plone.localcommands
-    This package provides local commands for templates from the templer.plone_
-    package. Provided commands include ``browserview``, ``browserlayer``,
-    ``at_contenttype`` and ``at_schema_field``.
+    This package provides :term:`local commands <local command>` for templates
+    from the templer.plone_ package. Provided commands include ``browserview``,
+    ``browserlayer``, ``at_contenttype`` and ``at_schema_field``.
 
 Package Dependencies
 ====================

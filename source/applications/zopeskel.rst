@@ -39,16 +39,16 @@ Virtualenv installation
 
 First, install virtualenv into your system::
 
-    easy_install virtualenv
+    $ easy_install virtualenv
 
 Next, create a virtual environment with the new ``virtualenv`` command::
 
-    virtualenv --distribute zopeskelenv
+    $ virtualenv --distribute zopeskelenv
 
 Once virtualenv has finished creating your new virtual environment, you can
 install zopeskel to your new virtual environment by::
 
-    zopeskelenv/bin/easy_install zopeskel
+    $ zopeskelenv/bin/easy_install zopeskel
 
 Once this is complete, you will have ``zopeskel`` and ``paster`` commands in the
 ``bin`` directory of your virtualenv.
@@ -57,26 +57,32 @@ Once this is complete, you will have ``zopeskel`` and ``paster`` commands in the
 Basic Usage
 -----------
 
-ZopeSkel is used to create empty projects for Zope. A number of templates are
-included with ZopeSkel, please see documentation for more information.
+ZopeSkel is used to create empty projects for Zope_ and Plone_. A number of templates are
+included with ZopeSkel:
 
-The most basic template is plone_basic. plone_basic creates an empty python
-egg with the option to add a GenericSetup profile to make an installable Plone
-product.
+* ``basic_namespace``
+* ``nested_namespace``
+* ``basic_buildout``
+* ``recipe``
+* ``zope2_basic`` 
+* ``zope2_nested`` 
+* ``plone_basic``
+* ``plone_nested`` 
+* ``archetype``
 
-for example::
+The most basic template for Plone_ is plone_basic, which creates an
+empty Plone add-on. Optionally you may add a GenericSetup profile to make your
+add-on appear in the list of available add-ons in Plone's *Site Setup*. In
+this case a profiles/default directory will be created in your new add-on. 
 
- ./bin/zopeskel plone_basic namespace.newprod
+For example::
 
+    $ ./bin/zopeskel plone_basic my.example
 
-This template asks you a series of questions and bases a new product from your
-answers.
-
-Unless you know what you are doing, select easy mode.
-
-You can register a GenericSetup profile if you need it. If you do register a
-profile, a profiles/default directory will be created, and initialize will be
-added to __init__.py ::
+This template asks you a series of questions and creates a new add-on
+:term:`package` from your answers. When prompted to choose a mode, unless you
+know what you are doing, select easy mode (it is the default). You will see
+output like the following::
 
     plone_basic: A package for Plone add-ons
 
@@ -102,7 +108,7 @@ added to __init__.py ::
     Version (Version number for project) ['1.0']: 1.0
     Description (One-line description of the project) ['']: This is an example product built with ZopeSkel
     Register Profile (Should this package register a GS Profile) [False]: True
-    Creating directory ./namespace.newprod
+    Creating directory ./my.example
     Replace 1079 bytes with 1273 bytes (1/43 lines changed; 5 lines added)
     Replace 42 bytes with 119 bytes (1/1 lines changed; 4 lines added)
     ------------------------------------------------------------------------------
@@ -126,3 +132,38 @@ added to __init__.py ::
 
 
 Once complete you will have a brand new Plone package waiting for customization!
+
+Local Commands
+--------------
+
+A :term:`local command` uses templates to allow you to add features to your
+newly created add-on. To run a local command, you must first change directory
+to inside your add-on::
+
+    $ cd my.example/src
+
+From here, you can use the ``paster`` command to show you which templates are
+available to use::
+
+    $ ../../bin/paster add --list
+    Available templates:
+        browserlayer:  A Plone browserlayer
+        browserview:   A browser view skeleton
+
+To run a specific local command, you provide the name of the template::
+
+    $ ../../bin/paster add browserview
+    Enter view_name (Browser view name) ['Example']: Example
+
+When this command completes, you will find a new browser module, with the 
+files required to add a browser view to your add-on::
+
+    $ ls -1 my/example/browser/
+    __init__.py
+    configure.zcml
+    exampleview.pt
+    exampleview.py
+
+.. _Zope: http://www.zope.org/
+.. _Plone: http://www.plone.org/
+
