@@ -25,6 +25,8 @@ from pre-defined templates. Through an interactive interface, the user
 provides information which is used to generate a skeleton of files and folders
 that fits their individual needs.
 
+To get started quickly, see :doc:`Using Templer <quickstart>`.
+
 Templer consists of a number of packages, each of which provides a set of
 templates. Install the package that you need for the templates you want.
 
