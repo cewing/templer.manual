@@ -3,6 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+==============================
 Templer/ZopeSkel System Manual
 ==============================
 
@@ -14,9 +15,11 @@ Zope_. With templer you can get a quick start building python-based projects
 for a number of systems and frameworks.
 
 Everyone--perhaps especially those who have used ZopeSkel_ in the past--should
-take a look at the introduction pages. The templer system consists of a number
-of inter-related packages, and you'll want to learn what is offered, and what
-you'll need to do to get started.
+take a look at the `Templer and ZopeSkel`_ section below. It will explain the
+relationship between the two systems.
+
+The templer system consists of a number of inter-related packages, and you'll
+want to learn what is offered, and what you'll need to do to get started.
 
 If you are new to using the templer system, you'll want to spend some time
 familiarizing yourself with the users manual.
@@ -24,17 +27,19 @@ familiarizing yourself with the users manual.
 If you are interested in extending the templer system with your own templates,
 read the developers manual.
 
+.. _Templer and ZopeSkel:
+
 Templer and ZopeSkel
---------------------
+====================
 
 .. sidebar:: Using ZopeSkel
 
     If you have worked with ZopeSkel_ in the past, you may continue to do so
     in the same way you always have. You will find that the selection of
     templates is a bit different, but the system works exactly as before.
-    
-    For more information on using ZopeSkel, see the ZopeSkel page in the
-    Templer Users Manual.
+
+    For more information on using ZopeSkel, see the `Using ZopeSkel` page in
+    the Templer Users Manual.
 
 In the beginning, there was ZopeSkel. You could install it and run commands to
 create new Zope_ and Plone_ packages. And it was good. But it was also
@@ -45,20 +50,23 @@ in usage was a very important goal, and so the ZopeSkel_ package has been
 preserved. Information about the rationale behind this decision is available
 in the History section of the Templer Developer's Manual.  
 
-At this point, ZopeSkel_ is simply a thin wrapper around the functionality
-and templates provided by the Templer system.  Installing ZopeSkel_ installs
-the Templer packages needed to reproduce the ZopeSkel_ experience.  All the 
-templates and supporting code are in Templer packages and none remains in the
-ZopeSkel_ package.
-
-
+Starting with version 3.0, ZopeSkel_ is simply a thin wrapper around the
+functionality and templates provided by the Templer system. Installing
+ZopeSkel_ installs the Templer packages needed to reproduce the ZopeSkel_
+experience. All the templates and supporting code are in Templer packages and
+none remains in the ZopeSkel_ package.
 
 Contents:
+=========
 
 .. toctree::
    :maxdepth: 2
-
-
+   
+   packages
+   quickstart
+   users/index
+   developers/index
+   information/index
 
 Indices and tables
 ==================
