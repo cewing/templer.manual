@@ -6,6 +6,5 @@ Templer Information
     :maxdepth: 2
     
     glossary
-    philosophy
     history
-    future
+    splitting

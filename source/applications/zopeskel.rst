@@ -55,7 +55,7 @@ Once this is complete, you will have ``zopeskel`` and ``paster`` commands in the
 
 
 Basic Usage
------------
+===========
 
 ZopeSkel is used to create empty projects for Zope_ and Plone_. A number of templates are
 included with ZopeSkel:
@@ -134,7 +134,7 @@ output like the following::
 Once complete you will have a brand new Plone package waiting for customization!
 
 Local Commands
---------------
+==============
 
 A :term:`local command` uses templates to allow you to add features to your
 newly created add-on. To run a local command, you must first change directory

@@ -8,6 +8,6 @@ applications which have been built using the templer system.  If you build
 such a system, please add it here.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    zopeskel
