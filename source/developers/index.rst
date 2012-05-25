@@ -1,6 +1,6 @@
-=========================
+==========================
 Templer Developer's Manual
-=========================
+==========================
 
 The templer developer's manual will provide the information a developer needs
 to be able to create new templates to address their own particular needs.
