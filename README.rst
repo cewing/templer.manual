@@ -9,6 +9,19 @@ To read this documentation online, visit XXX
 
 To contribute to this documentation, please read XXX
 
+Building The Manual
+-------------------
+
+After cloning this package from the repository, do the following::
+
+  $ cd templer.maual  # the location of your local copy
+  $ python bootstrap.py  # must be Python 2.6 or 2.7
+  $ ../bin/buildout
+  $ ../bin/sphinx
+
+At the end of a successful build, you will see the location of the
+resulting HTML pages.
+
 LICENSE
 =======
 
