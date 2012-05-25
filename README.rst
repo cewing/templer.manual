@@ -5,9 +5,7 @@ Introduction
 
 This package provides the source for the templer users and developers manual.
 
-To read this documentation online, visit XXX
-
-To contribute to this documentation, please read XXX
+To read this documentation online, visit http://templer-manual.readthedocs.org/
 
 Building The Manual
 -------------------
