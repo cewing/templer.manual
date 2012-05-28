@@ -164,6 +164,65 @@ files required to add a browser view to your add-on::
     exampleview.pt
     exampleview.py
 
+Local Commands and Python Paste
+-------------------------------
+
+Implementation details of local commands mean that any package which supports
+them will have a direct dependency on Paste_, PasteScript_ and PasteDeploy_.
+As a result, when you first create a package with available local commands,
+you will find that these three packages have automatically been installed
+*inside* your package structure::
+
+    $ cd ../
+    $ ls -1
+    CHANGES.txt
+    CONTRIBUTORS.txt
+    Paste-1.7.5.1-py2.6.egg
+    PasteDeploy-1.5.0-py2.6.egg
+    PasteScript-1.7.5-py2.6.egg
+    README.txt
+    ...
+
+This is an unfortunate but unavoidable situation so long as local commands are
+desired.  There are a few things you should keep in mind when working with
+packages that provide local commands:
+
+* Paste, PasteScript and PasteDeploy should **never** be placed under version
+  control.
+* Any time you check out the package and include it in a buildout, they will
+  reappear.
+* When you are finished with using local commands, you can get rid of these
+  extra packages for good by disabling local commands.
+
+Disabling Local Commands
+------------------------
+
+Local commands are useful for extending a package skeleton when you are first
+setting up a new project.  Once you've completed setup, however, it is a good
+idea to disable local commands so that you will no longer be bothered by the
+presence of extra package eggs in your source code tree.
+
+To disable local commands, and stop Paste, PasteScript and PasteDeploy from
+appearing when you work with your egg, you can edit the source code generated
+by ZopeSkel.  First, you will want to find and remove the following lines
+from your package ``setup.py`` file::
+
+    setup_requires=["PasteScript"],
+    paster_plugins=["templer.localcommands"],
+
+Additionally, you may remove the following from ``setup.cfg`` in your package
+root directory::
+
+    [templer.local]
+    template = plone_basic # note that the name found here may differ
+
+After removing these lines, your package will no longer have local commands
+available.  Furthermore, when you check it out of source control and include
+it in a buildout, you will no longer find Paste, PasteScript or PasteDeploy in
+your package source tree.
+
 .. _Zope: http://www.zope.org/
 .. _Plone: http://www.plone.org/
-
+.. _Paste: http://pythonpaste.org/
+.. _PasteScript: http://pythonpaste.org/script/
+.. _PasteDeploy: http://pythonpaste.org/deploy/
