@@ -92,9 +92,16 @@ Package Dependencies
 
 This diagram shows the dependency tree for existing Templer packages.
 Installing any Templer package will also install all of its dependencies.
+The base system provided by ``templer.core`` depends on PasteScript_, 
+PasteDeploy_ and Cheetah_.
 
 ::
 
+             PasteScript
+             PasteDeploy
+               Cheetah
+                  ^
+                  |
             templer.core        templer.localcommands
                   ^                        ^
                   |                        |
@@ -112,3 +119,6 @@ Installing any Templer package will also install all of its dependencies.
 .. _Zope: http://www.zope.org/
 .. _Python: http://www.python.org
 .. _zc.buildout: http://www.buildout.org/
+.. _PasteScript: http://pythonpaste.org/script/
+.. _PasteDeploy: http://pythonpaste.org/deploy/
+.. _Cheetah: http://www.cheetahtemplate.org/
