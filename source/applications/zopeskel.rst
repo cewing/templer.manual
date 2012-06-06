@@ -39,19 +39,11 @@ Virtualenv installation
 
 .. sidebar:: A Warning About Pip
 
-    At this time, it does not work to run ``pip install ZopeSkel`` in a
-    virtualenv installation.
+    Pip_ is a popular packaging tool for Python.  It has not always properly 
+    supported the installation of setuptools ``extras``.  If you use pip to
+    install ZopeSkel, you will need at least version 1.1.
     
-    Pip does not properly support the installation of "extra" requirements.
-    ZopeSkel depends on "extra" requirements for local commands.
-    
-    You can solve the problem by manually installing the extra requirement for
-    plone localcommands::
-    
-        pip install ZopeSkel
-        pip install templer.plone.localcommands
-    
-    See the discussion in this 
+    If you have questions, see the discussion in this ZopeSkel
     `issue report <https://github.com/collective/ZopeSkel/issues/4>`_
 
 First, install virtualenv into your system::
@@ -243,3 +235,4 @@ your package source tree.
 .. _Paste: http://pythonpaste.org/
 .. _PasteScript: http://pythonpaste.org/script/
 .. _PasteDeploy: http://pythonpaste.org/deploy/
+.. _Pip: http://www.pip-installer.org/
