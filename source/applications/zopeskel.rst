@@ -37,6 +37,23 @@ the ``bin`` directory of your buildout.
 Virtualenv installation
 -----------------------
 
+.. sidebar:: A Warning About Pip
+
+    At this time, it does not work to run ``pip install ZopeSkel`` in a
+    virtualenv installation.
+    
+    Pip does not properly support the installation of "extra" requirements.
+    ZopeSkel depends on "extra" requirements for local commands.
+    
+    You can solve the problem by manually installing the extra requirement for
+    plone localcommands::
+    
+        pip install ZopeSkel
+        pip install templer.plone.localcommands
+    
+    See the discussion in this 
+    `issue report <https://github.com/collective/ZopeSkel/issues/4>`_
+
 First, install virtualenv into your system::
 
     $ easy_install virtualenv
